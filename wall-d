@@ -83,13 +83,6 @@ done
 
 [ -z "$DIR" ] && usage && exit 0 # if no directory is set, print help message and exit
 
-#  show dmenu in pywal colors only if ran with -p flag
-source ~/.cache/wal/colors.sh
-if [ "$WithPywall" = "True" ]; then
-    colorOptions="-nb $color0 -nf $color15 -sb $color1 -sf $color15"
-else
-    colorOptions=""
-fi
 
 Single(){
     if [ "$randomly" = "True" ]; then
@@ -104,18 +97,18 @@ Single(){
 
 		if [ "$UseRofi" = "True" ] && [ "$UseFeh" = "True" ];
 		then
-				WallMenu="rofi -dmenu -i -l 5 -p "Options""
+				WallMenu="rofi -dmenu -l 5 -p "Options""
 				WallOptions=$(echo -e "fill\ncenter\ntile\nscale\nno-xinerama" | $WallMenu)
 		elif [ "$UseRofi" = "True" ] && [ "$UseFeh" = "False" ];
 		then
-				WallMenu="rofi -dmenu -i -l 5 -p "Options""
+				WallMenu="rofi -dmenu -l 5 -p "Options""
 				WallOptions=$(echo -e "zoom\ncenter\ntile\nstretch\nno-randr" | $WallMenu)
 		elif [ "$UseRofi" = "False" ] && [ "$UseFeh" = "True" ];
 		then
-				WallMenu="dmenu $colorOptions -i -l 5 -p "Options""
+				WallMenu="dmenu $colorOptions -l 5 -p "Options""
 				WallOptions=$(echo -e "fill\ncenter\ntile\nscale\nno-xinerama" | $WallMenu)
 		else
-				WallMenu="dmenu $colorOptions -i -l 5 -p "Options""
+				WallMenu="dmenu $colorOptions -l 5 -p "Options""
 				WallOptions=$(echo -e "zoom\ncenter\ntile\nstretch\nno-randr" | $WallMenu)
 		fi
 
@@ -157,18 +150,18 @@ Dual() {
 
 		if [ "$UseRofi" = "True" ] && [ "$UseFeh" = "True" ];
 		then
-				WallMenu="rofi -dmenu -i -l 5 -p "Options""
+				WallMenu="rofi -dmenu -l 5 -p "Options""
 				WallOptions=$(echo -e "fill\ncenter\ntile\nscale\nno-xinerama" | $WallMenu)
 		elif [ "$UseRofi" = "True" ] && [ "$UseFeh" = "False" ];
 		then
-				WallMenu="rofi -dmenu -i -l 5 -p "Options""
+				WallMenu="rofi -dmenu -l 5 -p "Options""
 				WallOptions=$(echo -e "zoom\ncenter\ntile\nstretch\nno-randr" | $WallMenu)
 		elif [ "$UseRofi" = "False" ] && [ "$UseFeh" = "True" ];
 		then
-				WallMenu="dmenu $colorOptions -i -l 5 -p "Options""
+				WallMenu="dmenu $colorOptions -l 5 -p "Options""
 				WallOptions=$(echo -e "fill\ncenter\ntile\nscale\nno-xinerama" | $WallMenu)
 		else
-				WallMenu="dmenu $colorOptions -i -l 5 -p "Options""
+				WallMenu="dmenu $colorOptions -l 5 -p "Options""
 				WallOptions=$(echo -e "zoom\ncenter\ntile\nstretch\nno-randr" | $WallMenu)
 		fi
 
@@ -207,18 +200,18 @@ Triple() {
 
 		if [ "$UseRofi" = "True" ] && [ "$UseFeh" = "True" ];
 		then
-				WallMenu="rofi -dmenu -i -l 5 -p "Options""
+				WallMenu="rofi -dmenu -l 5 -p "Options""
 				WallOptions=$(echo -e "fill\ncenter\ntile\nscale\nno-xinerama" | $WallMenu)
 		elif [ "$UseRofi" = "True" ] && [ "$UseFeh" = "False" ];
 		then
-				WallMenu="rofi -dmenu -i -l 5 -p "Options""
+				WallMenu="rofi -dmenu -l 5 -p "Options""
 				WallOptions=$(echo -e "zoom\ncenter\ntile\nstretch\nno-randr" | $WallMenu)
 		elif [ "$UseRofi" = "False" ] && [ "$UseFeh" = "True" ];
 		then
-				WallMenu="dmenu $colorOptions -i -l 5 -p "Options""
+				WallMenu="dmenu $colorOptions -l 5 -p "Options""
 				WallOptions=$(echo -e "fill\ncenter\ntile\nscale\nno-xinerama" | $WallMenu)
 		else
-				WallMenu="dmenu $colorOptions -i -l 5 -p "Options""
+				WallMenu="dmenu $colorOptions -l 5 -p "Options""
 				WallOptions=$(echo -e "zoom\ncenter\ntile\nstretch\nno-randr" | $WallMenu)
 		fi
 
