@@ -36,7 +36,7 @@ OnlyBetterlockscreen="False"
 WithBetterlockscreen="False"
 startMessage="Apply wallpaper to lockscreen"
 finishMessage="Finished applying wallpaper to lockscreen"
-UseFeh="False"
+UseFeh="True"
 UseRofi="False"
 
 # function to reset the last set wallpaper(s)
