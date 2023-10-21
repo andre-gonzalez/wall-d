@@ -23,8 +23,8 @@ NumOfMonitors=$(xrandr --listactivemonitors | grep "+" | wc -l)
 # get screen resulotion to calculate the center
 x=$(xrandr | grep "*" | sed 's/x/ /g' | awk -F " " '{print $1}' | sed 's/\ //g')
 y=$(xrandr | grep "*" | sed 's/x/ /g' | awk -F " " '{print $2}' | sed 's/\ //g')
-xl=$(echo "($x-500)/2" | bc)
-yl=$(echo "($y-500)/2" | bc)
+xl=$(echo "($x-500)/2" )
+yl=$(echo "($y-500)/2" )
 location=$(echo 500x500+$xl+$yl)
 # will be set to true when using -p flag to activate pywal
 WithPywall="False"
