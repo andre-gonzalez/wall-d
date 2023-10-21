@@ -8,8 +8,7 @@
 #     \_/\_/_/   \_\_____|_____|    |____/
 
 
-DIR="" # Path to wallpapers directory
-defaultwallpaper="$HOME/.local/bin/defaultwallpaper.sh"
+DIR="$HOME/.config/.wallpaper" # Path to wallpapers directory
 
 [ -f $defaultwallpaper ] && echo "defaultwallpaper.sh exists" || echo xwallpaper >> ~/.local/bin/defaultwallpaper.sh && chmod +x ~/.local/bin/defaultwallpaper.sh
 
